@@ -10,8 +10,8 @@ passes=5
 for fold in 0 #1 2 3 4
 do
     MODELNAME=$DESCRIPTOR.$fold.mdl
-    TRAINFILE=$PATHTOFEATS$DESCRIPTOR$.trainforfold$fold
-    TESTFILE=$PATHTOFEATS$DESCRIPTOR$.testorfold$fold
+    TRAINFILE=$PATHTOFEATS$DESCRIPTOR.trainforfold$fold
+    TESTFILE=$PATHTOFEATS$DESCRIPTOR.testorfold$fold
     predout=A
     rawout=B
 
