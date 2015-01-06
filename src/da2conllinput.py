@@ -17,7 +17,9 @@ for line_gold, line_system in zip(open(args.gold),open(args.system)):
     else:
         goldline = line_gold.split("|")
         header = goldline[0]
-        g, idx = header.strip().split(" ")
+        a = header.strip().split(" ")
+        g = a[0]
+        idx = a[-1]
 
         if args.bio or g == "O":
             pass 
