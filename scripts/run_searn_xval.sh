@@ -31,7 +31,7 @@ do
 	python "$HOME/"src/da2conllinput.py $TESTFILE $onecolout --class-map $HOME/data/res/da_map_bio_testtime.txt > $bioout
 	perl "$HOME/"scripts/conlleval.pl -d "\t" < $bioout > $evalout
 
-	python "$HOME"/src/cr_contrains_on_raw_searn.py $TESTFILE $rawout --class-map ../data/res/da_map_bio_testtime.txt --supersense-dict $CONSTRAINDICT > $bioconstout
+	python "$HOME"/src/cr_contrains_on_raw_searn.py $TESTFILE $rawout --class-map "$HOME"/data/res/da_map_bio_testtime.txt  --supersense-dict $CONSTRAINDICT > $bioconstout
 	perl "$HOME"/scripts/conlleval.pl -d "\t" < $bioconstout > $evalcrout
 
     rm $MODELNAME
