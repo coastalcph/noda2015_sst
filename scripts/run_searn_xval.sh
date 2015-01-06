@@ -14,11 +14,11 @@ do
     MODELNAME=$DESCRIPTOR.$fold.mdl
     TRAINFILE=$PATHTOFEATS$DESCRIPTOR.trainforfold$fold
     TESTFILE=$PATHTOFEATS$DESCRIPTOR.testorfold$fold
-    predout=$EVALPATH/$descriptor.fold$fold.preds
-    rawout=$EVALPATH/$descriptor.fold$fold.raw
-    bioout=$EVALPATH/$descriptor.fold$fold.bio
-    evalout=$EVALPATH/$descriptor.fold$fold.evalsimple
-    evalcrout=$EVALPATH/$descriptor.fold$fold.evalconstr
+    predout=$EVALPATH/$DESCRIPTOR.fold$fold.preds
+    rawout=$EVALPATH/$DESCRIPTOR.fold$fold.raw
+    bioout=$EVALPATH/$DESCRIPTOR.fold$fold.bio
+    evalout=$EVALPATH/$DESCRIPTOR.fold$fold.evalsimple
+    evalcrout=$EVALPATH/$DESCRIPTOR.fold$fold.evalconstr
 
 
 
