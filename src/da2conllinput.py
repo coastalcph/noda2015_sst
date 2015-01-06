@@ -21,10 +21,10 @@ for line_gold, line_system in zip(open(args.gold),open(args.system)):
         g = a[0]
         idx = a[-1]
 
-        if args.bio or g == "O":
-            pass 
-        else:
-            g = g[2:] #if BIO is not toggled, we discard the first two chars of the label before mapping
+        # if args.bio or g == "O":
+        #     pass
+        # else:
+        #     g = g[2:] #if BIO is not toggled, we discard the first two chars of the label before mapping
 
         s = line_system.strip()
         g = classdict[g]
