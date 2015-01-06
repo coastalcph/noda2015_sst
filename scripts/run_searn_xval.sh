@@ -15,6 +15,7 @@ do
     MODELNAME=$DESCRIPTOR.$fold.mdl
     TRAINFILE=$PATHTOFEATS$DESCRIPTOR.trainforfold$fold
     TESTFILE=$PATHTOFEATS$DESCRIPTOR.testforfold$fold
+    onecolout="$EVALPATH"$DESCRIPTOR.fold$fold.onecol
     predout="$EVALPATH"$DESCRIPTOR.fold$fold.preds
     rawout="$EVALPATH"$DESCRIPTOR.fold$fold.raw
     bioout="$EVALPATH"$DESCRIPTOR.fold$fold.bio
@@ -26,7 +27,7 @@ do
     $VW -b $B -k -c -d $TRAINFILE --passes $passes --search_task sequence --search $nclasses -f $MODELNAME --keep b
     $VW -t -d  $TESTFILE -i $MODELNAME -p $predout -r $rawout
 
-    python $HOME/src/vwsearn2column.py $predout --class-map $HOME/data/res/da_map_bio_testtime.txt > $onecolout
+    python $HOME/src/vwsearn2column.py $predout --class-map "$HOME"/data/res/da_map_bio_testtime.txt > $onecolout
 	python $HOME/src/da2conllinput.py $TESTFILE $onecolout --class-map $HOME/data/res/da_map_bio_testtime.txt > $bioout
 	perl $HOME/scripts/conlleval.pl -d "\t" < $bioout > $evalout
 
