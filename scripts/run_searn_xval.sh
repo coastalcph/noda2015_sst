@@ -1,6 +1,7 @@
-PATHTOFEATS=$HOME/data/folds/
 DESCRIPTOR=$1 #either alltags or nophr
 HOME="/home/alonso/proj/noda2015_sst/"
+PATHTOFEATS=$HOME/data/folds/
+
 EVALPATH="$HOME"data/runs/
 CONSTRAINDICT="$HOME"data/res/danishsst.possiblesupersenses
 VW="/home/alonso/tool/vw_nov2014/vowpal_wabbit/vowpalwabbit/vw"
