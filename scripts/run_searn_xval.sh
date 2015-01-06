@@ -7,10 +7,10 @@ CONSTRAINDICT="$HOME"data/res/danishsst.possiblesupersenses
 VW="/home/alonso/tool/vw_nov2014/vowpal_wabbit/vowpalwabbit/vw"
 
 nclasses=119
-B=5
+B=25
 passes=5
 
-for fold in 0 #1 2 3 4
+for fold in 0 1 2 3 4
 do
     MODELNAME=$DESCRIPTOR.$fold.mdl
     TRAINFILE=$PATHTOFEATS$DESCRIPTOR.trainforfold$fold
