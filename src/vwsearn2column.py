@@ -13,5 +13,5 @@ for line in open(args.file):
         if c in classdict:
             print c
         else:
-            print "DUMMYVALUE"
+            print
     
