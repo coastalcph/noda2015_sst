@@ -13,7 +13,7 @@ for fold in 0 #1 2 3 4
 do
     MODELNAME=$DESCRIPTOR.$fold.mdl
     TRAINFILE=$PATHTOFEATS$DESCRIPTOR.trainforfold$fold
-    TESTFILE=$PATHTOFEATS$DESCRIPTOR.testorfold$fold
+    TESTFILE=$PATHTOFEATS$DESCRIPTOR.testforfold$fold
     predout=$EVALPATH/$DESCRIPTOR.fold$fold.preds
     rawout=$EVALPATH/$DESCRIPTOR.fold$fold.raw
     bioout=$EVALPATH/$DESCRIPTOR.fold$fold.bio
