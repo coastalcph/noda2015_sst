@@ -1,6 +1,6 @@
-PATHTOFEATS="/home/alonso/proj/noda2015_sst/data/folds/"
+PATHTOFEATS=$HOME/data/folds/
 DESCRIPTOR=$1 #either alltags or nophr
-HOME="/home/alonso/proj/"
+HOME="/home/alonso/proj/noda2015_sst/"
 EVALPATH="$HOME"data/runs/
 CONSTRAINDICT="$HOME"data/res/danishsst.possiblesupersenses
 VW="/home/alonso/tool/vw_nov2014/vowpal_wabbit/vowpalwabbit/vw"
@@ -16,7 +16,7 @@ do
     TESTFILE=$PATHTOFEATS$DESCRIPTOR.testforfold$fold
     predout="$EVALPATH"$DESCRIPTOR.fold$fold.preds
     rawout="$EVALPATH"$DESCRIPTOR.fold$fold.raw
-    bioout="$EVALPATH"DESCRIPTOR.fold$fold.bio
+    bioout="$EVALPATH"$DESCRIPTOR.fold$fold.bio
     evalout="$EVALPATH"$DESCRIPTOR.fold$fold.evalsimple
     evalcrout="$EVALPATH"$DESCRIPTOR.fold$fold.evalconstr
 
