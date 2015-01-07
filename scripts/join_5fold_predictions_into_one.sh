@@ -3,7 +3,7 @@
 
 runspath=/home/alonso/proj/noda2015_sst/data/runs
 
-for evaltype in evalsimple evalconstr
+for evaltype in bio bioconstr
 do
     for sensetags in nophr alltags
     do
